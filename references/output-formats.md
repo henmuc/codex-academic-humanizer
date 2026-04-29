@@ -7,6 +7,8 @@ Always provide two deliverables unless the user asks otherwise:
 1. A clean revised version that can be pasted into the paper.
 2. A comparison version with brief notes.
 
+If the user provides a target style sample or revision intensity, mention the applied setting in one short line before the revised version.
+
 For Chinese tasks:
 
 ```markdown
@@ -51,6 +53,15 @@ For long papers or sections:
 - Keep citation style, numbering, and section labels unchanged.
 - If the full dual output would be too long, provide the clean revised version first and then a representative or section-by-section comparison.
 - Tell the user when comparison is partial because of length constraints.
+
+## File-Based Workflows
+
+When editing a manuscript file instead of pasted text:
+
+- Preserve file format and markup.
+- For Markdown or LaTeX, keep commands, labels, citations, equations, tables, and code blocks intact unless asked otherwise.
+- Prefer section-level edits and summarize changed sections.
+- If producing a separate revised file, keep the original file untouched unless the user explicitly asks to overwrite it.
 
 ## Risk Flags
 

@@ -1,6 +1,6 @@
 ---
 name: codex-academic-humanizer
-description: Polish and humanize Chinese or English academic writing while preserving factual meaning, terminology, citations, equations, variables, figure/table references, and argument structure. Use when Codex needs to revise thesis, journal paper, conference paper, abstract, introduction, method, results, discussion, response letter, or other scholarly text to reduce AI-like phrasing, improve academic readability, and output both a clean revised version and a paragraph-by-paragraph comparison with brief notes.
+description: Polish and humanize Chinese or English academic writing while preserving factual meaning, terminology, citations, equations, variables, figure/table references, and argument structure. Use when Codex needs to revise thesis, journal paper, conference paper, abstract, introduction, method, results, discussion, response letter, or other scholarly text to reduce AI-like phrasing, improve academic readability, match a target academic voice sample, control revision intensity, and output both a clean revised version and a paragraph-by-paragraph comparison with brief notes.
 ---
 
 # Codex Academic Humanizer
@@ -14,6 +14,7 @@ This skill is for style, clarity, and academic naturalness. It is not for adding
 ## Operating Rules
 
 - Preserve all facts, data, citations, formulas, variables, units, figure/table numbers, section references, dataset names, model names, and domain terms.
+- Preserve LaTeX commands, Markdown tables, BibTeX keys, cross-references, inline code, and placeholders unless the user explicitly asks to edit them.
 - Do not add literature, examples, mechanisms, limitations, conclusions, or numerical results unless they are explicitly present in the source or the user asks for content development.
 - Keep the paper's disciplinary register. Do not make formal academic writing sound like a blog, speech, product pitch, or popular science article.
 - Maintain hedging and uncertainty. Do not turn "may", "suggests", "is associated with", or "under the tested conditions" into absolute claims.
@@ -24,27 +25,33 @@ This skill is for style, clarity, and academic naturalness. It is not for adding
 ## Workflow
 
 1. Identify the mode:
-   - Use Chinese mode for Chinese academic prose.
-   - Use English mode for English academic prose.
-   - Use mixed mode when the text includes both; preserve each language's academic conventions.
-2. Identify the section type if possible: abstract, introduction, related work, method, experiment, results, discussion, conclusion, or response letter.
-3. Diagnose AI-like features before revising:
+   - Use Chinese mode for Chinese academic prose. Load `references/chinese-academic-style.md` and, when AI-like phrasing is visible, `references/chinese-ai-patterns.md`.
+   - Use English mode for English academic prose. Load `references/english-academic-style.md` and, when AI-like phrasing is visible, `references/academic-ai-patterns.md`.
+   - Use mixed mode when the text includes both. Load Chinese and English style references, and use the Chinese pattern checklist for Chinese sentences.
+2. Identify the requested revision intensity:
+   - Light: fix AI-like wording, grammar, and local flow while keeping sentence structure close to the original.
+   - Medium: default. Improve academic naturalness, cohesion, and sentence rhythm while preserving paragraph structure.
+   - Deep: rewrite more substantially for clarity and human academic voice, but preserve claims, evidence, and paragraph function.
+3. If the user provides a target style sample, extract reusable traits first: voice, sentence length, transition habits, degree of hedging, terminology style, and Chinese/English register. Do not copy unique facts or phrasing from the sample.
+4. Identify the section type if possible: abstract, introduction, related work, method, experiment, results, discussion, conclusion, or response letter.
+5. Diagnose AI-like features before revising:
    - Template transitions and stock phrases.
    - Repeated sentence rhythm.
    - Vague intensifiers or empty evaluative language.
    - Mechanical listing without argumentative flow.
    - Overly polished but underspecified sentences.
-4. Revise for academic naturalness:
+   - Use `references/academic-ai-patterns.md` as the detailed detection checklist when the text is long, important, or visibly AI-like.
+6. Revise for academic naturalness:
    - Make sentence structure varied but controlled.
    - Replace generic claims with precise formulations grounded in the source.
    - Improve cohesion between sentences without adding unsupported content.
    - Keep terminology stable and avoid needless synonym rotation for technical terms.
-5. Self-check the revision:
+7. Self-check the revision:
    - Compare claims against the original.
    - Check that no new fact, citation, data point, or causal relation was introduced.
    - Check that hedging, conditions, and limitations remain present.
    - Check that the style is academic, not casual.
-6. Output both required deliverables unless the user requests a different format:
+8. Output both required deliverables unless the user requests a different format:
    - Direct revised version.
    - Comparison version with original, revised text, and brief notes.
 
@@ -53,7 +60,10 @@ This skill is for style, clarity, and academic naturalness. It is not for adding
 Read the relevant reference only when needed:
 
 - For Chinese academic prose, use `references/chinese-academic-style.md`.
+- For Chinese AI-like academic phrasing, use `references/chinese-ai-patterns.md`.
 - For English academic prose, use `references/english-academic-style.md`.
+- For detailed AI-writing detection patterns adapted to papers, use `references/academic-ai-patterns.md`.
+- For revision intensity, target style samples, and terminology control, use `references/style-control.md`.
 - For output structure and long-document handling, use `references/output-formats.md`.
 
 ## Default Output

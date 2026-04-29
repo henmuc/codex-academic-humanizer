@@ -7,7 +7,11 @@ It is designed for thesis chapters, journal papers, conference papers, abstracts
 ## What It Does
 
 - Reduces AI-like phrasing in academic prose.
+- Uses a 36-pattern academic AI-writing checklist adapted for paper revision.
+- Includes a Chinese-specific 36-pattern checklist for Chinese thesis and journal-paper prose.
 - Supports Chinese, English, and mixed Chinese-English academic text.
+- Supports light, medium, and deep revision intensity.
+- Can match a target academic writing sample without copying its facts.
 - Preserves claims, evidence, hedging, citations, formulas, units, terms, and numbering.
 - Produces two outputs by default:
   - a clean revised version ready to paste into the paper
@@ -59,6 +63,20 @@ Use $codex-academic-humanizer to revise the following English academic paragraph
 Preserve hedging, citations, terminology, and the original argument structure.
 ```
 
+With revision intensity:
+
+```text
+Use $codex-academic-humanizer in deep mode to revise this introduction.
+Do not add claims, citations, or results.
+```
+
+With a target style sample:
+
+```text
+Use $codex-academic-humanizer to revise the paragraph below.
+Match the style of this sample, but do not copy its facts or phrases.
+```
+
 ## Acknowledgements
 
 This project is inspired by [blader/humanizer](https://github.com/blader/humanizer), an MIT-licensed Claude Code and OpenCode skill for reducing signs of AI-generated writing. Codex Academic Humanizer adapts that general idea for Codex and narrows the workflow to academic writing, bilingual Chinese-English paper revision, factual preservation, and dual-output comparison.
@@ -72,7 +90,10 @@ This project is inspired by [blader/humanizer](https://github.com/blader/humaniz
 │   └── openai.yaml
 └── references/
     ├── chinese-academic-style.md
+    ├── chinese-ai-patterns.md
     ├── english-academic-style.md
+    ├── academic-ai-patterns.md
+    ├── style-control.md
     └── output-formats.md
 ```
 
