@@ -51,6 +51,7 @@ This skill is for style, clarity, and academic naturalness. It is not for adding
    - Check that no new fact, citation, data point, or causal relation was introduced.
    - Check that hedging, conditions, and limitations remain present.
    - Check that the style is academic, not casual.
+   - For Chinese academic prose, use the final self-check in `references/chinese-revision-quality.md`.
 8. Output both required deliverables unless the user requests a different format:
    - Direct revised version.
    - Comparison version with original, revised text, and brief notes.
@@ -61,6 +62,7 @@ Read the relevant reference only when needed:
 
 - For Chinese academic prose, use `references/chinese-academic-style.md`.
 - For Chinese AI-like academic phrasing, use `references/chinese-ai-patterns.md`.
+- For Chinese final quality checks, use `references/chinese-revision-quality.md`.
 - For English academic prose, use `references/english-academic-style.md`.
 - For detailed AI-writing detection patterns adapted to papers, use `references/academic-ai-patterns.md`.
 - For revision intensity, target style samples, and terminology control, use `references/style-control.md`.

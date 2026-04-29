@@ -7,7 +7,12 @@ This project is inspired by:
   MIT License
   Copyright (c) 2025 Siqi Chen
 
+- Humanizer-zh by op7418
+  https://github.com/op7418/Humanizer-zh
+  MIT License
+  Copyright (c) 2026 歸藏
+
 Codex Academic Humanizer is written as a Codex-specific skill for academic
 Chinese and English prose revision. It is not a copy of the original skill;
-it narrows the workflow to scholarly writing, factual preservation, and
-dual-output paper editing.
+it narrows the workflow to scholarly writing, factual preservation, Chinese
+academic style control, and dual-output paper editing.
