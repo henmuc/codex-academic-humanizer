@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Academic Humanizer"
+  short_description: "中英文论文保真润色、降低AI腔，并生成对照说明文稿"
+  default_prompt: "Use $codex-academic-humanizer to polish this academic text while preserving facts, terms, citations, and argument structure, then provide both a clean revision and a comparison with brief notes."

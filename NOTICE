@@ -1,0 +1,13 @@
+Codex Academic Humanizer
+
+This project is inspired by:
+
+- humanizer by blader
+  https://github.com/blader/humanizer
+  MIT License
+  Copyright (c) 2025 Siqi Chen
+
+Codex Academic Humanizer is written as a Codex-specific skill for academic
+Chinese and English prose revision. It is not a copy of the original skill;
+it narrows the workflow to scholarly writing, factual preservation, and
+dual-output paper editing.
